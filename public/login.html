@@ -27,42 +27,90 @@
 
 <body>
 
-    <!-- Barra de Navegação Topo -->
+<!-- Barra de Navegação Topo -->
 
-    <nav id="navegation-bar"></nav>
-    <div class="nav-space"></div>
+<nav id="navegation-bar"></nav>
+<div class="nav-space"></div>
 
-    <!-- Coluna esquerda - Menus e outros -->
+<!-- Coluna esquerda - Menus e outros -->
 
-    <div class="row">
-        <div class="col s12 m4 l2 marginesquerda" id="mobileoff" style="margin-top: 1em">
-            <div id="menu"></div>
-        </div>
+<div class="row">
+    <div class="col s12 m4 l2 marginesquerda" id="mobileoff" style="margin-top: 1em">
+        <div id="menu"></div>
+    </div>
 
     <!-- Coluna Central - Postagens e outros -->
 
-    <div class="col s12 m4 l7" style="margin-top: 1em">
+
+    <div class="col s12 m5" style="margin-top: 1em">
+        <div class="title-pages collection z-depth-1">
+            <div class="title-pages collection collection-item active"><i class="fas fa-arrow-circle-down"> </i> Acesse
+                sua conta:
+            </div>
+        </div>
+
         <div class="row">
-            <div class="col s12">
-                <div class="card-panel white border-bottom">
-                    <span class="black-text"><i class="fas fa-bell blue-text" style="font-size: 16px;"> </i> Ative as notificações e fique por dentro de todos as novidades sobre seu Condominio! </b></span>
-                    <span class="grey-text">Caso ainda não saiba como ativar as notificações, <a>clique aqui.</a></span>
+            <div class="col s12 m12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" id="autocomplete-input" class="autocomplete">
+                        <label for="autocomplete-input">Usuário</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input type="password" id="autocomplete-input" class="autocomplete">
+                        <label for="autocomplete-input">Senha</label>
+                    </div>
+                    <div style="margin-left: 4rem;">
+                        <input type="checkbox" id="lembrarsenha" name="lembrarsenha">
+                        <label for="lembrarsenha">Deseja lembrar sua senha?</label>
+                    </div>
+                    <div class="divider" style="margin-top: 15px;"></div>
+                    <div style="margin-top: 15px;">
+                        <label>Caso esteja enfrentando problemas ao acessar sua conta, podemos te ajudar:</label>
+                        <label class="esqueceusenha">Esqueci minha senha ou usuário</label>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="postagens-artigos"></div>
+    </div>
+    <div class="col s12 m3" style="margin-top: 1em">
+        <div class="title-pages collection z-depth-1">
+            <div class="title-pages collection collection-item active"><i class="fas fa-user"> </i> Acesse sua Conta:
+            </div>
+        </div>
+        <span style="margin-top: 10x">Você pode acessar utilizando:</span>
+
+        <a class="btn1 btn-block btn-social btn-facebook" style="margin-top: 10px; width: 20rem;">
+            <span class="fab fa-facebook-square"></span> Acessar com Facebook
+        </a>
+
+        <a class="btn1 btn-block btn-social btn-google" style="width: 20rem;">
+            <span class="fab fa-google"></span> Acessar com gmail
+        </a>
+        <a href="./html/register.html" class="btn1 btn-block btn-social btn-microsoft" style="width: 20rem;">
+            <span class="fas fa-envelope"></span> Acessar com Email
+        </a>
+
+        <div class="divider" style="margin-top: 10px;"></div>
+
+        <div class="divider"></div>
+        <p class="contas-fontes" style="margin-top: 10px;">Ainda não possui cadastro?</p>
+        <p class="sub-contas-fontes" style="margin-top: 10px;">Registre-se agora e fique por dentro de todas as nossas
+            novidades!</p>
+        <a class="btn1 btn-block btn-social btn-criarconta" style="width: 20rem;">
+            <span href="./register.html" class="fas fa-plus"></span>Criar uma conta</a>
+
+
     </div>
 
-    <!-- Artigos recentes -->
 
-    <div class="col s12 m4 l3" id="recentes" style="margin-top: 1em">
-    </div>
-
-    <!-- Direitos Autorais ©  -->
-
-    <div class="col s12 m4 l3" id="bycraos">
-    </div>
+    <!-- Artigos recentes --
     </div>
 </body>
 </html>
