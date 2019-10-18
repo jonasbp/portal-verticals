@@ -3,7 +3,7 @@ $("#login").click(function () {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost/liteapi/auth/access",
+        url: "/liteapi/auth/access",
         dataType: "json",
         success: function (response) {
 
