@@ -12,7 +12,13 @@ $("#login").click(function () {
                 url: response.data.url,
                 dataType: "json",
                 success: function (response_user) {
-                    console.debug(response_user);
+                    if (response_user !== undefined) {
+                        if (response_user.token_type === 'Bearer') {
+                            sessionStorage.clear();
+                            location = './';
+                        }
+
+                    }
                 },
                 headers: {
                     "Authorization": response.data.hash
