@@ -98,6 +98,23 @@ html, body {
     }
 }
 
+
+@media only screen and (max-width: 550px) {
+    .desativarmobile {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #mobileoff {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+
 .boxusuario {
     visibility: hidden;
     float: left;
@@ -124,10 +141,12 @@ html, body {
     }
 }
 
+
 @media only screen and (max-width: 1000px) {
     .financeslogo {
         display: none;
     }
+
 }
 
 .menu-direito-eventos {
