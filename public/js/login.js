@@ -4,7 +4,10 @@ $("#login").click(function () {
         type: "POST",
         url: "/liteapi/auth/access",
         dataType: "json",
-        success: loginuser
+        success: loginuser,
+        data: {
+            service: "auth"
+        }
     });
 
 });
@@ -38,17 +41,39 @@ let userinfo = function (oauth) {
         success: function (response) {
 
             if (response.avatar === null) {
-
+                obtemavatar(response, function (avatar) {
+                    response.avatar = avatar;
+                    salvarinfouser(response)
+                })
+            } else {
+                salvarinfouser(response);
             }
 
-            sessionStorage.clear();
-            sessionStorage.user = JSON.stringify(response);
-            window.location = './';
         }
     });
 
 };
 
-let obtemavatar = function () {
+let salvarinfouser = function(user) {
+    sessionStorage.clear();
+    sessionStorage.user = JSON.stringify(user);
+    window.location = './';
+};
+
+let obtemavatar = function (userinfo, callback) {
+
+    $.ajax({
+        type: "POST",
+        url: "/liteapi/auth/avatar",
+        dataType: "json",
+        success: function (response) {
+            callback(response.data);
+        },
+        data: {
+            service: "auth",
+            username: userinfo.username,
+            name: userinfo.first_name + ' ' + userinfo.last_name
+        }
+    });
 
 };
