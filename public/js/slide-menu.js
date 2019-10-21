@@ -5,7 +5,7 @@ $(".button-collapse").sideNav();
 //menu parte de baixo
 
 $(document).ready(function(){
-    $('.modal').modal();
+    //$('.modal').modal();
 });
 
 

@@ -1,19 +1,28 @@
 //user register
 $(document).ready(function () {
-    $('.modal').modal();
+    //$('.modal').modal();
 });
 
 //  Barra de navegação topo - Usuário deslogado
 
 $.post('./html/grids/navegation.html', function (navegation) {
     $('#navegation-bar').html(navegation);
+
+    if (sessionStorage.user !== undefined) {
+        console.debug(sessionStorage);
+        let user = JSON.parse(sessionStorage.user);
+        let avatar = document.getElementById('usuario_info');
+
+        if (avatar !== null)
+            avatar.innerHTML = "<img alt='' style='width: 25px' src='"+user.avatar+"' />";
+    }
 });
 
-$.post('../html/grids/navegation.html', function (navegation) {
+$.post('./html/grids/navegation.html', function (navegation) {
     $('#navegation-bar2').html(navegation);
 });
 
-$.post('../financeiro/grids/navegation.html', function (navegation) {
+$.post('./financeiro/grids/navegation.html', function (navegation) {
     $('#navegation-bar-financeiro').html(navegation);
 });
 
@@ -34,7 +43,7 @@ $.post('./html/grids/copyright.html', function (copyright) {
 });
 
 
-$.post('../financeiro/grids/copyright.html', function (copyright) {
+$.post('./financeiro/grids/copyright.html', function (copyright) {
     $('#bycraos2').html(copyright);
 });
 
@@ -44,7 +53,7 @@ $.post('./html/grids/menu.html', function (menu) {
     $('#menu').html(menu);
 });
 
-$.post('../financeiro/grids/menu.html', function (menu) {
+$.post('./financeiro/grids/menu.html', function (menu) {
     $('#menu2').html(menu);
 });
 

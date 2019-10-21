@@ -14,6 +14,8 @@ $("#login").click(function () {
 
 let loginuser = function (oauth) {
 
+    console.debug(document.getElementById('usuario'));
+
     $.ajax({
         type: "POST",
         url: oauth.data.oauth,
@@ -77,3 +79,12 @@ let obtemavatar = function (userinfo, callback) {
     });
 
 };
+
+$(document).ready(function () {
+
+    if (sessionStorage.user !== undefined) {
+        let user = JSON.parse(sessionStorage.user);
+        document.getElementById('user-cicle').src = user.avatar;
+    }
+
+});
