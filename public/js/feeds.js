@@ -1,15 +1,16 @@
 //user register
-$(document).ready(function () {
+//$(document).ready(function () {
     //$('.modal').modal();
-});
+//});
 
 //  Barra de navegação topo - Usuário deslogado
 
 $.post('./html/grids/navegation.html', function (navegation) {
+
     $('#navegation-bar').html(navegation);
+    $('#navegation-bar2').html(navegation);
 
     if (sessionStorage.user !== undefined) {
-        console.debug(sessionStorage);
         let user = JSON.parse(sessionStorage.user);
         let avatar = document.getElementById('usuario_info');
 
@@ -18,43 +19,16 @@ $.post('./html/grids/navegation.html', function (navegation) {
     }
 });
 
-$.post('./html/grids/navegation.html', function (navegation) {
-    $('#navegation-bar2').html(navegation);
-});
-
-$.post('./financeiro/grids/navegation.html', function (navegation) {
-    $('#navegation-bar-financeiro').html(navegation);
-});
-
-//  Barra de navegação topo - Usuário logado
-
-$.post('./html/grids/user-navegation.html', function (logged) {
-    $('#user-navegation-bar').html(logged);
-});
 
 //  Selo copyright - Coluna lateral
-
-$.post('./html/grids/copyright.html', function (copyright) {
-    $('#bycraos2').html(copyright);
-});
-
 $.post('./html/grids/copyright.html', function (copyright) {
     $('#bycraos').html(copyright);
-});
-
-
-$.post('./financeiro/grids/copyright.html', function (copyright) {
     $('#bycraos2').html(copyright);
 });
 
 //  Menu Lateral - Acessos
-
 $.post('./html/grids/menu.html', function (menu) {
     $('#menu').html(menu);
-});
-
-$.post('./financeiro/grids/menu.html', function (menu) {
-    $('#menu2').html(menu);
 });
 
 $.post('./html/feeds/artigo.html', function (artigo) {
@@ -73,6 +47,7 @@ $(document).ready(function(){
         });
     })
 });
+
 //
 // function exibirregistro() {
 //     // document.getElementById("registro").innerHTML = './html/register.html';
