@@ -19,6 +19,12 @@ html, body {
     width: 100%;
 }
 
+.linhapolitica{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fafafa;
+}
+
 .teste2{
     color: #808080;
 }

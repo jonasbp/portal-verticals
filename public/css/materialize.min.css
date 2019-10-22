@@ -5682,15 +5682,49 @@ button.btn-floating {
     position: fixed;
     left: 0;
     right: 0;
-    background-color: #fafafa;
+    background-color: white;
     padding: 0;
     max-height: 70%;
-    width: 55%;
+    width: 25%;
     margin: auto;
     overflow-y: auto;
-    border-radius: 2px;
-    will-change: top, opacity
+    border-radius: 10px;
+    will-change: top, opacity;
+    border-bottom: solid 3px #00b0ff;
 }
+
+
+.modaluser {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 0;
+    max-height: 70%;
+    width: 25%;
+    margin: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+    will-change: top, opacity;
+    border-bottom: solid 3px #00b0ff;
+}
+.modallogin {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 0;
+    max-height: 70%;
+    width: 30%;
+    margin: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+    will-change: top, opacity;
+    border-bottom: solid 3px #00b0ff;
+}
+
 
 @media only screen and (max-width: 992px) {
     .modal {
@@ -5712,7 +5746,7 @@ button.btn-floating {
 
 .modal .modal-footer {
     border-radius: 0 0 2px 2px;
-    background-color: #fafafa;
+    background-color: WHITE;
     padding: 4px 6px;
     height: 56px;
     width: 100%;
