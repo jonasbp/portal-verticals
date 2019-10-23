@@ -5717,11 +5717,12 @@ button.btn-floating {
     background-color: white;
     padding: 0;
     max-height: 70%;
-    width: 30%;
+    width: 25%;
     margin: auto;
     overflow-y: auto;
     border-radius: 10px;
     will-change: top, opacity;
+    border-top: solid 3px #00b0ff;
     border-bottom: solid 3px #00b0ff;
 }
 

@@ -24,126 +24,136 @@
 <div class="nav-space"></div>
 
 <div class="container" style="margin-top: 2%;>
-    <div class="row">
+    <div class=" row
+">
 
 <div class="col s12 m3 ">
 
+    <!----------------------------->
+    <!-- Modal trocar de usuário -->
+    <!----------------------------->
+
+    <a class="waves-effect waves-light btn modal-trigger" href="#trocarusuario">Modal</a>
+    <div id="trocarusuario" class="modal modaluser">
+        <ul class="collection">
+            <li class="collection-item avatar">
+                <img src="./img/avatar.jpg" alt="" class="circle">
+                <span class="title">Oberdan Brito de Jesus</span>
+                <p>Condominio Verticals</p>
+                <a class="waves-effect waves-light">Gerenciar minha conta</a>
+                <a href="#!" class="secondary-content dropdown-trigger" data-target='dropdownmenu'><i
+                        class="fas fa-ellipsis-v black-text"></i></a>
+            </li>
+            <div class="divider"></div>
+            <div class="collection">
+                <a href="#!" class="collection-item"><i class="fas fa-user-plus"></i> Adicionar outra conta</a>
+                <a href="#!" class="collection-item"><i class="fas fa-user-cog"></i> Gerenciar contas neste dispositivo</a>
+                <a href="#!" class="collection-item ce"><i class="fas fa-user-times"></i> Sair da minha conta</a>
+            </div>
+            <div class="divider"></div>
+            <div class="linhapolitica center">
+                <a class="waves-effect waves-light">Politica de Privacidade •</a>
+                <a class="waves-effect waves-light">Termos de Serviço</a>
+            </div>
+        </ul>
+    </div>
+
+    <div class="col  s12 m3 ">
+
         <!----------------------------->
-        <!-- Modal trocar de usuário -->
+        <!-- Modal Login Usuário     -->
         <!----------------------------->
 
-        <a class="waves-effect waves-light btn modal-trigger" href="#trocarusuario">Modal</a>
-        <div id="trocarusuario" class="modal modaluser">
-            <ul class="collection">
-                <li class="collection-item avatar">
-                    <img src="./img/avatar.jpg" alt="" class="circle">
-                    <span class="title">Oberdan Brito de Jesus</span>
-                    <p>Condominio Verticals</p>
-                    <a class="waves-effect waves-light">Gerenciar minha conta</a>
-                    <a href="#!" class="secondary-content dropdown-trigger" data-target='dropdownmenu'><i class="fas fa-ellipsis-v black-text"></i></a>
-                </li>
-                <div class="divider"></div>
-                <div class="collection">
-                    <a href="#!" class="collection-item"><i class="fas fa-user-plus"></i> Adicionar outra conta</a>
-                    <a href="#!" class="collection-item"><i class="fas fa-user-cog"></i> Gerenciar contas neste dispositivo</a>
-                    <a href="#!" class="collection-item ce"><i class="fas fa-user-times"></i> Sair da minha conta</a>
-                </div>
-                <div class="divider"></div>
-                <div class="linhapolitica center">
-                    <a class="waves-effect waves-light">Politica de Privacidade •</a>
-                    <a class="waves-effect waves-light">Termos de Serviço</a>
-                </div>
-            </ul>
-        </div>
+        <a class="waves-effect waves-light btn modal-trigger" href="#loginusuario">Modal Login</a>
+        <div id="loginusuario" class="modal modallogin">
+            <div class="modal-content">
 
-       <div class="col  s12 m3 ">
-
-           <!----------------------------->
-           <!-- Modal Login Usuário     -->
-           <!----------------------------->
-
-            <a class="waves-effect waves-light btn modal-trigger" href="#loginusuario">as</a>
-                <div id="loginusuario" class="modal modallogin">
-                <div class="modal-content">
-
-                    <div class="container"></div>
+                <div class="container"></div>
 
 
-                    <div class="col s12 m7" >
-            <span > Utilize suas credenciais para acessar sua conta:</span>
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <i class="material-icons prefix">person</i>
-                                        <input type="text" id="usuario" class="autocomplete">
-                                        <label for="usuario">Usuário</label>
-                                    </div>
+                <div class="col s12">
+                    <div class="center-align">
+                    <span>Utilize suas credenciais para acessar sua conta:</span>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">person</i>
+                                    <input type="text" id="usuario" class="autocomplete">
+                                    <label for="usuario">Usuário</label>
                                 </div>
-
+                            </div>
+                            <div class="col s12">
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">vpn_key</i>
                                         <input type="password" id="senha" class="autocomplete">
                                         <label for="senha">Senha</label>
                                     </div>
-                                    <div style="margin-left: 4rem;">
+                                    <div class="center-align">
                                         <input type="checkbox" id="lembrarsenha" name="lembrarsenha">
                                         <label for="lembrarsenha">Deseja lembrar sua senha?</label>
                                     </div>
-                                    <a id="login" class="waves-effect waves-light btn white black-text border-bottom-fina " style="margin-top: 15px; width: 100%">Acessar minha conta</a>
-                                    <div class="divider" style="margin-top: 15px;"></div>
-
-                                    <div style="margin-top: 15px;">
-                                        <label>Caso esteja enfrentando problemas ao acessar sua conta, podemos te ajudar:</label>
-                                        <label class="esqueceusenha">Esqueci minha senha ou usuário</label>
+                                    <div class="center-align">
+                                        <a id="login"
+                                           class="waves-effect waves-light btn white black-text border-bottom-fina "
+                                           style="margin-top: 15px; width: 100%;">Acessar sua conta</a>
                                     </div>
                                 </div>
+
                             </div>
-                </div>
-                    </div>
-                    <div class="col s12 m3" style="margin-top: 5px">
+                            <div class="divider" style="width: 100%"></div>
+                            <div class="center-align">
+                                <label class="container">Caso esteja enfrentando problemas ao acessar sua conta, podemos
+                                    te ajudar:</label><br/>
+                                <label class="esqueceusenha container">Esqueci minha senha ou usuário</label>
+                            </div>
 
-                        <span>Você pode acessar utilizando:</span>
-
-                        <a class="btn1 btn-block btn-social btn-facebook" style="margin-top: 10px;">
-                            <span class="fab fa-facebook-square"></span> Acessar com Facebook
-                        </a>
-
-                        <a class="btn1 btn-block btn-social btn-google">
-                            <span class="fab fa-google"></span> Acessar com gmail
-                        </a>
-
-                        <div class="divider" style="margin-top: 10px;"></div>
-
-                        <div class="divider"></div>
-                        <p class="contas-fontes" style="margin-top: 10px;">Ainda não possui cadastro?</p>
-                        <p class="sub-contas-fontes" style="margin-top: 10px;">Registre-se agora e fique por dentro de todas as nossas
-                            novidades!</p>
-                        <a href="./registro.html" class="btn1 btn-block btn-social btn-criarconta"">
-                            <span class="fas fa-plus"></span>Criar uma conta
-                        </a>
+                        </div>
                     </div>
                 </div>
 
+                <div class="col s12">
+                    <a class="btn1 btn-block btn-social btn-facebook" style="margin-top: 10px;">
+                        <span class="fab fa-facebook-square"></span> Acessar com Facebook
+                    </a>
+
+                    <a class="btn1 btn-block btn-social btn-google">
+                        <span class="fab fa-google"></span> Acessar com gmail
+                    </a>
+
+                    <div class="divider" style="margin-top: 10px;"></div>
+
+                    <div class="divider"></div>
+                    <p class="contas-fontes" style="margin-top: 10px;">Ainda não possui cadastro?</p>
+                    <p class="sub-contas-fontes" style="margin-top: 10px;">Registre-se agora e fique por dentro de todas
+                        as nossas
+                        novidades!</p>
+                    <a href="./registro.html"
+                       class="btn1 btn-block btn-social waves-effect waves-light btn white black-text border-bottom-fina"">
+                    Criar uma conta no Verticals
+                    </a>
                 </div>
-
-
             </div>
+            <div class="divider"></div>
+            <div class="linhapolitica center" style="margin-bottom: 10px;">
+                <a class="waves-effect waves-light">Politica de Privacidade •</a>
+                <a class="waves-effect waves-light">Termos de Serviço</a>
+            </div>
+        </div>
+
+    </div>
 
 
+</div>
 
-
-
-
-     </div>
-
-    <script>
-        $(document).ready(function(){
-            $('.modal').modal();
-        });
-        $('.dropdown-trigger').dropdown();
-    </script>
+<script>
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+    $('.dropdown-trigger').dropdown();
+</script>
 
 </div>
 </body>
