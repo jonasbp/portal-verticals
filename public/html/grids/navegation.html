@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verticals | Desenvolvimento</title>
-    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
-    <link rel="stylesheet" href="../../css/index.css">
-    <script type="text/javascript" src="../../lib/jquery/jquery-3.4.1.min.js"></script
-    <script type="text/javascript" src="../../js/materialize.min.js"></script
+<!--    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>-->
+<!--    <link rel="stylesheet" href="../../css/index.css">-->
+<!--    <script type="text/javascript" src="../../lib/jquery/jquery-3.4.1.min.js"></script-->
+<!--    <script type="text/javascript" src="../../js/materialize.min.js"></script-->
     <script src="https://kit.fontawesome.com/b9786aa6c5.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <script defer src="../../js/slide-menu.js"></script>
+<!--   <script defer src="../../js/slide-menu.js"></script>-->
     <script defer src="../../js/usuario.js"></script>
 </head>
 <body>
@@ -18,6 +18,23 @@
 <style>
     img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
         display: none;
+    }
+
+    .modallogin {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 0;
+        max-height: 100%;
+        width: 95%;
+        margin: auto;
+        overflow-y: auto;
+        border-radius: 10px;
+        will-change: top, opacity;
+        border-top: solid 3px #00b0ff;
+        border-bottom: solid 3px #00b0ff;
     }
 </style>
 
@@ -41,10 +58,6 @@
 
     <div id="modal1" class="modal modallogin">
         <div class="modal-content">
-
-            <div class="container"></div>
-
-
             <div class="col s12">
                 <div class="center-align">
                     <span>Utilize suas credenciais para acessar sua conta:</span>
@@ -52,7 +65,7 @@
                 <div class="row">
                     <div class="col s12">
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s12" style="border-bottom: solid 1px #00bcd4;">
                                 <i class="material-icons prefix">person</i>
                                 <input type="text" id="usuario" class="autocomplete">
                                 <label for="usuario">Usuário</label>
@@ -60,7 +73,7 @@
                         </div>
                         <div class="col s12">
                             <div class="row">
-                                <div class="input-field col s12">
+                                <div class="input-field col s12" style="border-bottom: solid 1px #00bcd4;">
                                     <i class="material-icons prefix">vpn_key</i>
                                     <input type="password" id="senha" class="autocomplete">
                                     <label for="senha">Senha</label>
@@ -79,29 +92,23 @@
                         </div>
                         <div class="divider" style="width: 100%"></div>
                         <div class="center-align">
-                            <label class="container">Caso esteja enfrentando problemas ao acessar sua conta, podemos
-                                te ajudar:</label><br/>
                             <label class="esqueceusenha container">Esqueci minha senha ou usuário</label>
                         </div>
-
                     </div>
                 </div>
             </div>
-
             <div class="col s12">
-                <a class="btn1 btn-block btn-social btn-facebook" style="margin-top: 10px;">
+                <a class="btn1 btn-block btn-social btn-facebook">
                     <span class="fab fa-facebook-square"></span> Acessar com Facebook
                 </a>
-
                 <a class="btn1 btn-block btn-social btn-google">
                     <span class="fab fa-google"></span> Acessar com gmail
                 </a>
-
                 <div class="divider" style="margin-top: 10px;"></div>
 
                 <div class="divider"></div>
-                <p class="contas-fontes" style="margin-top: 10px;">Ainda não possui cadastro?</p>
-                <p class="sub-contas-fontes" style="margin-top: 10px;">Registre-se agora e fique por dentro de todas
+                <p class="contas-fontes">Ainda não possui cadastro?</p>
+                <p class="sub-contas-fontes">Registre-se agora e fique por dentro de todas
                     as nossas
                     novidades!</p>
                 <a href="./registro.html"
@@ -111,10 +118,7 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div class="linhapolitica center" style="margin-bottom: 10px;">
-            <a class="waves-effect waves-light">Politica de Privacidade •</a>
-            <a class="waves-effect waves-light">Termos de Serviço</a>
-        </div>
+
     </div>
 
 
