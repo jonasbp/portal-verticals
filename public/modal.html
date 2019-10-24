@@ -33,11 +33,14 @@
     <!-- Modal trocar de usuário -->
     <!----------------------------->
 
-    <a class="waves-effect waves-light btn modal-trigger" href="#trocarusuario">Modal</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#trocarusuario">Trocar Usuário</a>
     <div id="trocarusuario" class="modal modaluser">
         <ul class="collection">
             <li class="collection-item avatar">
-                <img src="./img/avatar.jpg" alt="" class="circle">
+                <a class=" modal-trigger" href="#uploadfotos">
+                    <img src="./img/avatar.jpg" alt="" class="circle">
+                </a>
+
                 <span class="title">Oberdan Brito de Jesus</span>
                 <p>Condominio Verticals</p>
                 <a class="waves-effect waves-light">Gerenciar minha conta</a>
@@ -67,10 +70,6 @@
         <a class="waves-effect waves-light btn modal-trigger" href="#loginusuario">Modal Login</a>
         <div id="loginusuario" class="modal modallogin">
             <div class="modal-content">
-
-                <div class="container"></div>
-
-
                 <div class="col s12">
                     <div class="center-align">
                     <span>Utilize suas credenciais para acessar sua conta:</span>
@@ -131,7 +130,7 @@
                         as nossas
                         novidades!</p>
                     <a href="./registro.html"
-                       class="btn1 btn-block btn-social waves-effect waves-light btn white black-text border-bottom-fina"">
+                       class="btn1 btn-block btn-social waves-effect waves-light btn white black-text border-bottom-fina">
                     Criar uma conta no Verticals
                     </a>
                 </div>
@@ -145,8 +144,42 @@
 
     </div>
 
+    <!----------------------------->
+    <!-- Modal Upload Fotos      -->
+    <!----------------------------->
+
+
+    <a class="waves-effect waves-light btn modal-trigger" href="#uploadfotos">Upload Fotos</a>
+
+    <!-- Modal Structure -->
+    <div id="uploadfotos" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h5>Selecionar uma foto de perfil</h5>
+            <p>Faça upload ou selecione uma foto para seu perfil no Verticals</p>
+
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#test4">Upload de Fotos</a></li>
+                    <li class="tab"><a href="#test5">Suas fotos</a></li>
+                </ul>
+            </div>
+            <div class="card-content" style="margin-top: 10px;">
+                <div id="test4">Test 1</div>
+                <div id="test5">Test 2</div>
+            </div>
+        </div>
+
+
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat blue white-text">Definir foto de perfil</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        </div>
+    </div>
+
 
 </div>
+
+
 
 <script>
     $(document).ready(function () {
