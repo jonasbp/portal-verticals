@@ -15,6 +15,13 @@
     <script defer src="../../js/nav-opitions.js"></script>
 </head>
 <body>
+<script>
+    $(".button-collapse").sideNav();
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+    $('.dropdown-trigger').dropdown();
+</script>
 
 <style>
     img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
@@ -250,15 +257,6 @@
         </li>
     </ul>
 
-<script>
-    $(".button-collapse").sideNav();
-    $(document).ready(function () {
-        $('.modal').modal();
-    });
-    $('.dropdown-trigger').dropdown();
-    $(document).ready(function() {
-        M.updateTextFields();
-    });
-</script>
+
 </body>
 </html>
