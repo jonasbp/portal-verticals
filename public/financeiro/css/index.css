@@ -137,13 +137,17 @@ html, body {
     }
 }
 
-
+@media only screen and (max-width: 1000px) {
+    .boxusuario {
+        visibility: visible;
+        padding-right: 15px;
+        font-size: 20px
+    }
+}
 
 .boxusuario {
     visibility: hidden;
     float: left;
-    position: relative;
-    display: inline;
 }
 
 @media only screen and (max-width: 1000px) {
