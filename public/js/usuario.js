@@ -1,8 +1,4 @@
-
-
 let loginuser = function (oauth) {
-
-    console.debug(document.getElementById('usuario'));
 
     $.ajax({
         type: "POST",
@@ -45,9 +41,11 @@ let userinfo = function (oauth) {
 };
 
 let salvarinfouser = function(user) {
+
     sessionStorage.clear();
     sessionStorage.user = JSON.stringify(user);
-    window.location = './';
+    apresentaavatar();
+
 };
 
 let obtemavatar = function (userinfo, callback) {
@@ -68,11 +66,24 @@ let obtemavatar = function (userinfo, callback) {
 
 };
 
-$(document).ready(function () {
+let apresentaavatar = function () {
 
     if (sessionStorage.user !== undefined) {
+
+        //Usuário logado
         let user = JSON.parse(sessionStorage.user);
-        //document.getElementById('user-cicle').src = user.avatar;
+        let avatar = document.getElementById('usuario_info');
+
+        if (avatar !== null) {
+            avatar.innerHTML = "<img alt='' href='trocarusuario' style='width: 25px; border-radius: 50px;' src='"+user.avatar+"' />";
+        }
+
+        document.getElementById('iconelogin').style.display = 'none';
+        document.getElementById('loginusuario').style.display = 'none';
+        document.getElementById('botaologin').onclick = null;
+
+
     }
 
-});
+
+};
