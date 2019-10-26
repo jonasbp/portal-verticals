@@ -1,16 +1,4 @@
-$("#login").click(function () {
 
-    $.ajax({
-        type: "POST",
-        url: "/liteapi/auth/access",
-        dataType: "json",
-        success: loginuser,
-        data: {
-            service: "auth"
-        }
-    });
-
-});
 
 let loginuser = function (oauth) {
 
@@ -84,7 +72,7 @@ $(document).ready(function () {
 
     if (sessionStorage.user !== undefined) {
         let user = JSON.parse(sessionStorage.user);
-        document.getElementById('user-cicle').src = user.avatar;
+        //document.getElementById('user-cicle').src = user.avatar;
     }
 
 });
