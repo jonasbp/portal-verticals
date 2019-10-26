@@ -1,14 +1,54 @@
-//user register
-//$(document).ready(function () {
-    //$('.modal').modal();
-//});
+let load = (function() {
 
-//  Barra de navegação topo - Usuário deslogado
+    function VerticalsPart() {
+        return function (src, target1, target2) {
+            return new Promise(function (resolve, reject) {
+                $(target1).load(src, function (response, status) {
+                    if (status === 'success') {
 
-$.post('./html/grids/navegation.html', function (navegation) {
+                        if (target2 !== undefined)
+                            $(target2).html(response);
+                        resolve();
 
-    $('#navegation-bar').html(navegation);
-    $('#navegation-bar2').html(navegation);
+                    } else {
+                        reject();
+                    }
+                });
+            })
+        }
+    }
+
+    return {
+        Start: VerticalsPart()
+    }
+})();
+
+// Carrega todas partes na mesma saída asincrona
+Promise.all([
+    load.Start('html/grids/navegation.html', '#navegation-bar', '#navegation-bar2'),
+    load.Start('html/grids/copyright.html', '#bycraos', '#bycraos2'),
+    load.Start('html/grids/menu.html', '#menu'),
+    load.Start('html/feeds/artigo.html', '#postagens-artigos'),
+    load.Start('html/grids/recents.html', '#recentes')
+]).then(function() {
+
+    $('.modal').modal();
+
+    $("#ler-pagina").click = function(){
+        $("#conteudo-pagina-lida").load("pagina-lida.html");
+    };
+
+    $("#login").click = function () {
+        $.ajax({
+            type: "POST",
+            url: "/liteapi/auth/access",
+            dataType: "json",
+            success: loginuser,
+            data: {
+                service: "auth"
+            }
+        });
+    };
 
     sessionStorage.user = JSON.stringify({
         nome: 'Oberdan',
@@ -26,48 +66,15 @@ $.post('./html/grids/navegation.html', function (navegation) {
         let avatar = document.getElementById('usuario_info');
 
         if (avatar !== null) {
-            avatar.innerHTML = "<img href='trocarusuario' style='width: 25px; border-radius: 50px;' src='"+user.avatar+"' />";
+            avatar.innerHTML = "<img alt='' href='trocarusuario' style='width: 25px; border-radius: 50px;' src='"+user.avatar+"' />";
         }
         document.getElementById('iconelogin').style.display = 'none';
 
     }
+
+    console.debug('carregamento das partes efetuado com sucesso');
+
+
+}).catch(function(reason) {
+    console.error(reason);
 });
-
-
-//  Selo copyright - Coluna lateral
-$.post('./html/grids/copyright.html', function (copyright) {
-    $('#bycraos').html(copyright);
-    $('#bycraos2').html(copyright);
-});
-
-//  Menu Lateral - Acessos
-$.post('./html/grids/menu.html', function (menu) {
-    $('#menu').html(menu);
-});
-
-$.post('./html/feeds/artigo.html', function (artigo) {
-    $('#postagens-artigos').html(artigo);
-});
-
-$.post('./html/grids/recents.html', function (recents) {
-    $('#recentes').html(recents);
-});
-
-$(document).ready(function(){
-    $("#ler-pagina").click(function(){
-
-        $(function(){
-            $("#conteudo-pagina-lida").load("pagina-lida.html");
-        });
-    })
-});
-
-//
-// function exibirregistro() {
-//     // document.getElementById("registro").innerHTML = './html/register.html';
-//     window.location.replace('./html/register.html','janela');
-// }
-//
-// $.post('../html/register.html', function (registro) {
-//     $('register').html(registro);
-// });
