@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+    //initialize all modals
+    $('.modal').modal();
+});
+
 let load = (function() {
 
     function VerticalsPart() {
@@ -32,8 +37,6 @@ Promise.all([
     load.Start('html/grids/recents.html', '#recentes')
 ]).then(function() {
 
-    $('.modal').modal();
-
     $("#ler-pagina").click = function(){
         $("#conteudo-pagina-lida").load("pagina-lida.html");
     };
@@ -51,6 +54,10 @@ Promise.all([
     };
 
     apresentaavatar();
+
+    //now you can open modal from code
+    $('#modal1').modal('close');
+
 
     console.debug('carregamento das partes efetuado com sucesso');
 
