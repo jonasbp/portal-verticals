@@ -1,7 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    //initialize all modals
-    $('.modal').modal();
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     //initialize all modals
+//     $('.modal').modal({
+//         onOpenEnd: function () {
+//             console.log('chegou')
+//         }
+//     });
+// });
+//]
+
+
+
 
 let load = (function() {
 
@@ -42,21 +50,21 @@ Promise.all([
     };
 
     document.getElementById('start-auth').onclick = function() {
+
+        $("#progresslogin").css("display", "block");
+
         $.ajax({
             type: "POST",
-            url: "/liteapi/auth/access",
+            url: "http://192.168.0.30/liteapi/auth/access",
             dataType: "json",
             success: loginuser,
             data: {
                 service: "auth"
             }
         });
+
+
     };
-
-    apresentaavatar();
-
-    //now you can open modal from code
-    $('#modal1').modal('close');
 
 
     console.debug('carregamento das partes efetuado com sucesso');

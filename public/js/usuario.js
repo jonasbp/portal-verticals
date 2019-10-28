@@ -2,7 +2,7 @@ let loginuser = function (oauth) {
 
     $.ajax({
         type: "POST",
-        url: oauth.data.oauth,
+        url: 'http://192.168.0.30' + oauth.data.oauth,
         dataType: "json",
         success: function (response) {
             userinfo(oauth)
@@ -22,10 +22,11 @@ let userinfo = function (oauth) {
 
     $.ajax({
         type: "GET",
-        url: oauth.data.info + $("#usuario").val(),
+        url: 'http://192.168.0.30' + oauth.data.info + $("#usuario").val(),
         dataType: "json",
         success: function (response) {
-
+            $("#progresslogin").css("display", "none");
+            $('#loginusuario').modal('close');
             if (response.avatar === null) {
                 obtemavatar(response, function (avatar) {
                     response.avatar = avatar;
@@ -52,7 +53,7 @@ let obtemavatar = function (userinfo, callback) {
 
     $.ajax({
         type: "POST",
-        url: "/liteapi/auth/avatar",
+        url: "http://192.168.0.30/liteapi/auth/avatar",
         dataType: "json",
         success: function (response) {
             callback(response.data);
@@ -79,8 +80,6 @@ let apresentaavatar = function () {
         }
 
         document.getElementById('iconelogin').style.display = 'none';
-        document.getElementById('loginusuario').style.display = 'none';
-        document.getElementById('botaologin').onclick = null;
 
 
     }
