@@ -4257,14 +4257,27 @@ nav ul a span.badge {
 }
 
 nav {
-    background-color: #f9f9f9;;
+    background-color: #fafafb;
     width: 100%;
-    height: 56px;
-    line-height: 56px;
+    height: 45px;
+    line-height: 45px;
     border-top: 3px solid #33C3F0;
     position: fixed;
     z-index: 9999;
 }
+
+@media only screen and (max-width: 550px) {
+  nav {
+        background-color: #fafafb;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        border-top: 3px solid #33C3F0;
+        position: fixed;
+        z-index: 9999;
+    }
+}
+
 
 nav.nav-extended {
     height: auto

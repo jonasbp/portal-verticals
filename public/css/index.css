@@ -20,6 +20,52 @@ html, body {
     }
 }
 
+#brandlogopc{
+    display: block;
+}
+
+#brandlogomobile{
+    display: none;
+}
+
+avisonavmobile{
+    display: none;
+}
+@media only screen and (max-width: 550px) {
+    #avisonavmobile{
+     display: ;
+    }
+    .brand-logo-mobile{
+        position: absolute;
+        display: inline-block;
+        font-size: 2.1rem;
+        padding-left: 2em;
+    }
+    .tamanhologo{
+        margin-top: 5px;
+        width: auto;
+        height: 30px;
+    }
+    #brandlogomobile {
+        display: block;
+    }
+
+    #brandlogopc{
+        display: none;
+    }
+
+    #menunav{
+        margin-top: -8px;
+        font-size: 30px;
+        color: grey;
+    }
+    #iconelogin{
+        margin-top: 6px;
+        font-size: 30px;
+        color: grey;
+    }
+}
+
 .hover{
     cursor: pointer;
 }
